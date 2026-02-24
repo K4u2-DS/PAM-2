@@ -2,6 +2,17 @@ import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 
 export default function App() {
+    
+  var requestOptions = {
+        method: 'GET',
+        redirect: 'follow'
+    };
+    
+    fetch("http://localhost:3000/posts", requestOptions)
+      .then(response => response.json())
+      .then(result => console.log(result))
+      .catch(error => console.log('error', error));
+
   return (
     <View style={styles.container}>
       <Text>Open up App.js to start working on your app!</Text>
@@ -13,7 +24,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#494848ff',
     alignItems: 'center',
     justifyContent: 'center',
   },
