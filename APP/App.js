@@ -1,18 +1,22 @@
-import { StyleSheet, Text, View } from 'react-native';
-import AppRoutes from './routes/app.routes';
-import react from 'react';
+import React from "react";
+import AppRoutes from "./routes/app.routes";
 
 export default function App() {
   return <AppRoutes />;
 }
 
-
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#494848ff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+// Usuário toca na tela
+//         ↓
+// Screen (MovieList)
+//         ↓
+// Hook (useMovies)
+//         ↓
+// Service (movieService)
+//         ↓
+// API (api.js / servidor)
+//         ↓
+// Service retorna dados
+//         ↓
+// Hook atualiza estado
+//         ↓
+// Screen renderiza componentes
