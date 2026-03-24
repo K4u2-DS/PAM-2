@@ -20,7 +20,7 @@ export default function AppRoutes() {
         />
 
         <Stack.Screen
-          name={ROUTES.MOVIE_DETAILS}
+          name={ROUTES.MOVIE_DETAIL}
           component={MovieDetails}
           options={{ title: "Detalhes do Filme" }}
         />

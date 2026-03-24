@@ -4,13 +4,19 @@ import { getMovies } from "../services/movieService";
 export const useMovies = () => {
   const [movies, setMovies] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
   const fetchMovies = async () => {
+    setLoading(true);
+    setError(null);
     try {
       const data = await getMovies();
-      setMovies(data);
+      console.log("Filmes recebidos:", data);
+      setMovies(Array.isArray(data) ? data : []);
     } catch (error) {
-      console.log("Erro ao buscar filmes:", error);
+      console.error("Erro ao buscar filmes:", error);
+      setError(error.message);
+      setMovies([]);
     } finally {
       setLoading(false);
     }
@@ -23,6 +29,7 @@ export const useMovies = () => {
   return {
     movies,
     loading,
+    error,
     refresh: fetchMovies, 
   };
 };
