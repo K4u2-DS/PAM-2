@@ -1,48 +1,52 @@
-import { StyleSheet } from 'react-native';
+import { StyleSheet } from "react-native";
 
 export default StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#f5f5f5',
+    backgroundColor: "#121212",
   },
+
   form: {
     padding: 16,
-    backgroundColor: '#fff',
-    margin: 16,
-    borderRadius: 8,
   },
+
   label: {
+    color: "#BBBBBB",
+    marginBottom: 6,
+    marginTop: 10,
     fontSize: 14,
-    fontWeight: '600',
-    marginTop: 16,
-    marginBottom: 8,
-    color: '#333',
   },
+
   input: {
-    borderWidth: 1,
-    borderColor: '#ddd',
-    borderRadius: 8,
+    backgroundColor: "#1E1E1E",
+    color: "#FFFFFF",
     padding: 12,
-    fontSize: 14,
-    backgroundColor: '#f9f9f9',
+    borderRadius: 10,
+    borderWidth: 1,
+    borderColor: "#2C2C2C",
   },
+
   textArea: {
     height: 100,
-    textAlignVertical: 'top',
+    textAlignVertical: "top",
   },
+
   button: {
-    backgroundColor: '#007AFF',
-    borderRadius: 8,
+    marginTop: 20,
+    backgroundColor: "#BB86FC",
     padding: 16,
-    alignItems: 'center',
-    marginTop: 24,
+    borderRadius: 12,
+    alignItems: "center",
+    elevation: 4,
   },
+
   buttonDisabled: {
-    backgroundColor: '#ccc',
+    opacity: 0.6,
   },
+
   buttonText: {
-    color: '#fff',
+    color: "#000",
+    fontWeight: "bold",
     fontSize: 16,
-    fontWeight: '600',
   },
 });

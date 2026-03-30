@@ -1,7 +1,7 @@
 {
   "filmes": [
     {
-      "id": 1,
+      "id": "1",
       "nome": "Titanic",
       "img_capa": "https://upload.wikimedia.org/wikipedia/pt/2/22/Titanic_poster.jpg",
       "ano": "1997",
@@ -22,7 +22,7 @@
       ]
     },
     {
-      "id": 2,
+      "id": "2",
       "nome": "The Dark Knight",
       "img_capa": "https://upload.wikimedia.org/wikipedia/pt/d/d1/The_Dark_Knight.jpg",
       "ano": "2008",
@@ -43,7 +43,7 @@
       ]
     },
     {
-      "id": 3,
+      "id": "3",
       "nome": "Avengers: Endgame",
       "img_capa": "https://upload.wikimedia.org/wikipedia/en/0/0d/Avengers_Endgame_poster.jpg",
       "ano": "2019",
@@ -64,7 +64,7 @@
       ]
     },
     {
-      "id": 4,
+      "id": "4",
       "nome": "Inception",
       "img_capa": "https://upload.wikimedia.org/wikipedia/en/2/2e/Inception_%282010%29_theatrical_poster.jpg",
       "ano": "2010",
@@ -83,6 +83,14 @@
           "imagem": "https://upload.wikimedia.org/wikipedia/commons/3/3c/Joseph_Gordon-Levitt_SDCC_2012.jpg"
         }
       ]
+    },
+    {
+      "id": 1774900238192,
+      "nome": "O Máscara",
+      "ano": "1994",
+      "img_capa": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSJeoSxKKN244jmoAvvoFa8praGNV0sHLAXtSkFDgyHlg_tax7b",
+      "sinopse": "Stanley Ipkiss (Jim Carrey) é um bancário tímido e socialmente desajeitado que tem sua vida transformada ao encontrar uma máscara mágica contendo o espírito do deus Loki. Ao usá-la, ele se torna \"O Máskara\", um ser excêntrico, de rosto verde, indestrutível e com humor caótico. Ele passa a flertar com a cantora Tina Carlyle, atraindo a ira de um gângster perigoso.",
+      "elenco": []
     }
   ]
 }

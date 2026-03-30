@@ -1,1 +1,1 @@
-export const API_URL = "http://localhost:3000";
+export const API_URL = "https://automatic-zebra-pjwvr5464rq4h9pgp-3000.app.github.dev";

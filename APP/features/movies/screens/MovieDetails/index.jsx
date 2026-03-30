@@ -1,6 +1,7 @@
 import React from 'react';
-import { View, Text, ScrollView, Image, FlatList } from 'react-native';
-import { useRoute } from '@react-navigation/native';
+import { View, Text, ScrollView, Image, FlatList, TouchableOpacity, Alert } from 'react-native';
+import { useRoute, useNavigation } from '@react-navigation/native';
+import { deleteMovie } from '../../services/movieService';
 import styles from './styles';
 
 export default function MovieDetails() {

@@ -1,5 +1,14 @@
 import React, { useState } from "react";
-import { View, Text, TextInput, TouchableOpacity, ScrollView, Alert } from "react-native";
+import { 
+  View, 
+  Text, 
+  TextInput, 
+  TouchableOpacity, 
+  ScrollView, 
+  Alert,
+  KeyboardAvoidingView,
+  Platform
+} from "react-native";
 import { createMovie } from "../../services/movieService";
 import styles from "./styles";
 
@@ -28,68 +37,72 @@ export default function CreateMovie({ navigation }) {
       };
 
       await createMovie(newMovie);
-      Alert.alert("Sucesso", "Filme cadastrado com sucesso!");
-      setNome("");
-      setAno("");
-      setImgCapa("");
-      setSinopse("");
+
+      Alert.alert("Sucesso", "Filme cadastrado!");
       navigation.goBack();
     } catch (error) {
       Alert.alert("Erro", "Falha ao cadastrar filme");
-      console.error("Erro:", error);
     } finally {
       setLoading(false);
     }
   };
 
   return (
-    <ScrollView style={styles.container}>
-      <View style={styles.form}>
-        <Text style={styles.label}>Nome do Filme</Text>
-        <TextInput
-          style={styles.input}
-          placeholder="Digite o nome do filme"
-          value={nome}
-          onChangeText={setNome}
-        />
+    <KeyboardAvoidingView 
+      style={{ flex: 1 }} 
+      behavior={Platform.OS === "ios" ? "padding" : undefined}
+    >
+      <ScrollView style={styles.container} showsVerticalScrollIndicator={false}>
+        <View style={styles.form}>
+          <Text style={styles.label}>Nome do Filme</Text>
+          <TextInput
+            style={styles.input}
+            placeholder="Digite o nome"
+            placeholderTextColor="#888"
+            value={nome}
+            onChangeText={setNome}
+          />
 
-        <Text style={styles.label}>Ano</Text>
-        <TextInput
-          style={styles.input}
-          placeholder="Digite o ano"
-          value={ano}
-          onChangeText={setAno}
-          keyboardType="numeric"
-        />
+          <Text style={styles.label}>Ano</Text>
+          <TextInput
+            style={styles.input}
+            placeholder="Ex: 2024"
+            placeholderTextColor="#888"
+            value={ano}
+            onChangeText={setAno}
+            keyboardType="numeric"
+          />
 
-        <Text style={styles.label}>URL da Capa</Text>
-        <TextInput
-          style={styles.input}
-          placeholder="Cole a URL da imagem"
-          value={img_capa}
-          onChangeText={setImgCapa}
-        />
+          <Text style={styles.label}>URL da Capa</Text>
+          <TextInput
+            style={styles.input}
+            placeholder="https://..."
+            placeholderTextColor="#888"
+            value={img_capa}
+            onChangeText={setImgCapa}
+          />
 
-        <Text style={styles.label}>Sinopse</Text>
-        <TextInput
-          style={[styles.input, styles.textArea]}
-          placeholder="Digite a sinopse"
-          value={sinopse}
-          onChangeText={setSinopse}
-          multiline
-          numberOfLines={4}
-        />
+          <Text style={styles.label}>Sinopse</Text>
+          <TextInput
+            style={[styles.input, styles.textArea]}
+            placeholder="Digite a sinopse..."
+            placeholderTextColor="#888"
+            value={sinopse}
+            onChangeText={setSinopse}
+            multiline
+          />
 
-        <TouchableOpacity 
-          style={[styles.button, loading && styles.buttonDisabled]}
-          onPress={handleCreateMovie}
-          disabled={loading}
-        >
-          <Text style={styles.buttonText}>
-            {loading ? "Cadastrando..." : "Cadastrar Filme"}
-          </Text>
-        </TouchableOpacity>
-      </View>
-    </ScrollView>
+          <TouchableOpacity 
+            style={[styles.button, loading && styles.buttonDisabled]}
+            onPress={handleCreateMovie}
+            disabled={loading}
+          >
+            <Text style={styles.buttonText}>
+              {loading ? "Cadastrando..." : "Cadastrar Filme"}
+            </Text>
+          </TouchableOpacity>
+        </View>
+      </ScrollView>
+    </KeyboardAvoidingView>
   );
 }

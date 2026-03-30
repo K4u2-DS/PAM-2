@@ -19,3 +19,13 @@ export const createMovie = async (movie) => {
     throw error;
   }
 };
+
+export const deleteMovie = async (id) => {
+  try {
+    const response = await api.delete(`/filmes/${id}`);
+    return response.data;
+  } catch (error) {
+    console.error("Erro ao deletar filme:", error);
+    throw error;
+  }
+};

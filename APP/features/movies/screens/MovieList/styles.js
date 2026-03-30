@@ -1,44 +1,40 @@
-import { StyleSheet } from 'react-native';
+import { StyleSheet } from "react-native";
 
 export default StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#f5f5f5',
-    paddingTop: 16,
+    backgroundColor: "#121212",
+    padding: 16,
   },
+
   addButton: {
-    marginHorizontal: 16,
+    backgroundColor: "#BB86FC",
+    padding: 14,
+    borderRadius: 12,
+    alignItems: "center",
     marginBottom: 16,
-    backgroundColor: '#007AFF',
-    paddingVertical: 12,
-    paddingHorizontal: 16,
-    borderRadius: 8,
-    alignItems: 'center',
+    elevation: 5,
   },
+
   addButtonText: {
-    color: '#fff',
+    color: "#000",
     fontSize: 16,
-    fontWeight: '600',
+    fontWeight: "bold",
   },
+
   columnWrapper: {
-    justifyContent: 'space-between',
-    paddingHorizontal: 16,
-    marginBottom: 16,
+    justifyContent: "space-between",
   },
-  loadingText: {
-    fontSize: 16,
-    color: '#666',
-    alignSelf: 'center',
-    marginTop: 50,
-  },
-  emptyContainer: {
+
+  loadingContainer: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    paddingBottom: 50,
+    justifyContent: "center",
+    alignItems: "center",
+    backgroundColor: "#121212",
   },
-  emptyText: {
-    fontSize: 16,
-    color: '#999',
+
+  loadingText: {
+    color: "#fff",
+    marginTop: 10,
   },
 });
