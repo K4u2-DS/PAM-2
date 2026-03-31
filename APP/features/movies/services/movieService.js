@@ -1,17 +1,12 @@
 import { api } from "../../../services/api";
 
-// 🔥 lista de possíveis rotas
 const POSSIBLE_ROUTES = [
-  "/movies",
   "/filmes",
-  "/movie",
-  "/api/movies",
-  "/api/filmes",
 ];
 
 let workingRoute = null;
 
-// 🔍 descobre automaticamente a rota correta
+
 const findWorkingRoute = async () => {
   for (let route of POSSIBLE_ROUTES) {
     try {
@@ -60,8 +55,8 @@ export const deleteMovie = async (id) => {
     if (!workingRoute) {
       await findWorkingRoute();
     }
-
-    await api.delete(`${workingRoute}/${id}`);
+    const encodedId = encodeURIComponent(String(id));
+    await api.delete(`${workingRoute}/${encodedId}`);
   } catch (error) {
     console.log("Erro DELETE:", error.message);
     throw error;

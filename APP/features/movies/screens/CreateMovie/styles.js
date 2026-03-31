@@ -17,6 +17,14 @@ export default StyleSheet.create({
     marginBottom: 5,
   },
 
+  sectionTitle: {
+    color: COLORS.text,
+    fontWeight: "bold",
+    marginTop: 20,
+    marginBottom: 10,
+    fontSize: 16,
+  },
+
   input: {
     backgroundColor: COLORS.card,
     color: COLORS.text,
@@ -27,6 +35,28 @@ export default StyleSheet.create({
 
   textArea: {
     height: 100,
+  },
+
+  castPreview: {
+    marginTop: 10,
+    marginBottom: 15,
+  },
+
+  actorRow: {
+    backgroundColor: COLORS.card,
+    padding: 12,
+    borderRadius: 10,
+    marginBottom: 10,
+  },
+
+  actorName: {
+    color: COLORS.text,
+    fontWeight: "bold",
+  },
+
+  actorRole: {
+    color: COLORS.text,
+    opacity: 0.8,
   },
 
   button: {

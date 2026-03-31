@@ -17,11 +17,10 @@ export function useMovies() {
     }
   };
 
-  // 🔹 função para deletar um filme
   const removeMovie = async (id) => {
     try {
       await deleteMovie(id);
-      setMovies((prev) => prev.filter((movie) => movie.id !== id));
+      setMovies((prev) => prev.filter((movie) => String(movie.id) !== String(id)));
     } catch (error) {
       console.log("Erro ao deletar filme:", error);
     }

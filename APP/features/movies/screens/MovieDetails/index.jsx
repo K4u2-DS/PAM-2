@@ -18,13 +18,17 @@ export default function MovieDetails() {
   const { movie } = route.params;
 
  const handleDelete = async () => {
-    try {
+    if (!movie?.id) {
+      Alert.alert("Erro", "Não foi possível identificar o filme para deletar.");
+      return;
+    }
 
+    try {
       await deleteMovie(movie.id);
       navigation.goBack(); 
     } catch (error) {
       console.error("Erro ao deletar:", error);
-    
+      Alert.alert("Erro", "Falha ao deletar filme.");
     }
   };
 

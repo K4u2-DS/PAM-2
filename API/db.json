@@ -22,27 +22,6 @@
       ]
     },
     {
-      "id": "2",
-      "nome": "The Dark Knight",
-      "img_capa": "https://upload.wikimedia.org/wikipedia/pt/d/d1/The_Dark_Knight.jpg",
-      "ano": "2008",
-      "sinopse": "Batman enfrenta o Coringa, um criminoso caótico que ameaça mergulhar Gotham City na anarquia e testar os limites morais do herói.",
-      "elenco": [
-        {
-          "id": 1,
-          "nome": "Christian Bale",
-          "personagem": "Bruce Wayne / Batman",
-          "imagem": "https://upload.wikimedia.org/wikipedia/commons/0/0a/Christian_Bale-7834.jpg"
-        },
-        {
-          "id": 2,
-          "nome": "Heath Ledger",
-          "personagem": "Coringa",
-          "imagem": "https://upload.wikimedia.org/wikipedia/commons/7/75/Heath_Ledger.jpg"
-        }
-      ]
-    },
-    {
       "id": "3",
       "nome": "Avengers: Endgame",
       "img_capa": "https://upload.wikimedia.org/wikipedia/en/0/0d/Avengers_Endgame_poster.jpg",
@@ -64,23 +43,48 @@
       ]
     },
     {
-      "id": "4",
-      "nome": "Inception",
-      "img_capa": "https://upload.wikimedia.org/wikipedia/en/2/2e/Inception_%282010%29_theatrical_poster.jpg",
-      "ano": "2010",
-      "sinopse": "Um ladrão especializado em extrair segredos do subconsciente durante o sono é contratado para realizar uma tarefa inversa: plantar uma ideia na mente de um alvo.",
+      "id": 17,
+      "nome": "dsasadasd",
+      "ano": "2021",
+      "img_capa": "https://upload.wikimedia.org/wikipedia/commons/8/8d/Chris_Evans_SDCC_2014.jpg",
+      "sinopse": "pokfbdoijnfdh",
+      "elenco": []
+    },
+    {
+      "id": 12,
+      "nome": "Spider-Man: Brand New Day ",
+      "ano": "2026",
+      "img_capa": "https://upload.wikimedia.org/wikipedia/en/thumb/9/9a/Spider-Man_Brand_New_Day_poster.jpg/250px-Spider-Man_Brand_New_Day_poster.jpg",
+      "sinopse": "A strange new pattern of crimes gives rise to one of the most powerful threats Spider-Man's ever faced.",
+      "elenco": [
+        {
+          "id": 14,
+          "nome": "Tom Holland",
+          "personagem": "Peter Parker",
+          "imagem": "https://m.media-amazon.com/images/M/MV5BODBjZDlhNDctN2MyNC00ZmIyLWFhYWQtMDM1MTAyZWFlZDQ2XkEyXkFqcGdeQWFybm8@._V1_QL75_UX500_CR0,0,500,281_.jpg"
+        }
+      ]
+    },
+    {
+      "id": 1774968511305,
+      "nome": "Arthur-Paias",
+      "ano": "2009",
+      "img_capa": "https://i.redd.it/qsc70plu90oa1.jpg",
+      "sinopse": "Paiamen",
+      "elenco": []
+    },
+    {
+      "id": "64b9",
+      "nome": "TesteAPI",
+      "ano": "2026",
+      "img_capa": "https://test.img",
+      "sinopse": "Teste",
       "elenco": [
         {
           "id": 1,
-          "nome": "Leonardo DiCaprio",
-          "personagem": "Dom Cobb",
-          "imagem": "https://upload.wikimedia.org/wikipedia/commons/4/46/Leonardo_DiCaprio_2014.jpg"
-        },
-        {
-          "id": 2,
-          "nome": "Joseph Gordon-Levitt",
-          "personagem": "Arthur",
-          "imagem": "https://upload.wikimedia.org/wikipedia/commons/3/3c/Joseph_Gordon-Levitt_SDCC_2012.jpg"
+          "nome": "Ator",
+          "personagem": "Papel",
+          "imagem": "https://img"
         }
       ]
     }
