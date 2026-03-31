@@ -1,69 +1,77 @@
-import { StyleSheet } from 'react-native';
+import { StyleSheet } from "react-native";
+import { COLORS } from "../../../../constants/colors";
 
 export default StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#f5f5f5',
+    backgroundColor: COLORS.background,
   },
+
   poster: {
-    width: '100%',
-    height: 400,
-    resizeMode: 'cover',
+    width: "100%",
+    height: 300,
   },
+
   content: {
     padding: 16,
-    backgroundColor: '#fff',
-    marginTop: 10,
   },
+
   title: {
+    color: COLORS.text,
     fontSize: 24,
-    fontWeight: 'bold',
-    marginBottom: 8,
-    color: '#333',
+    fontWeight: "bold",
   },
+
   year: {
-    fontSize: 14,
-    color: '#666',
-    marginBottom: 16,
+    color: COLORS.textSecondary,
+    marginBottom: 10,
   },
+
   sectionTitle: {
-    fontSize: 18,
-    fontWeight: '600',
-    marginTop: 20,
-    marginBottom: 12,
-    color: '#333',
+    color: COLORS.primary,
+    marginTop: 15,
+    fontSize: 16,
+    fontWeight: "bold",
   },
+
   synopsis: {
-    fontSize: 14,
-    color: '#555',
-    lineHeight: 22,
-    marginBottom: 16,
+    color: COLORS.textSecondary,
+    marginTop: 5,
+    lineHeight: 20,
   },
+
+  deleteButton: {
+    marginTop: 20,
+    backgroundColor: COLORS.danger,
+    padding: 12,
+    borderRadius: 10,
+    alignItems: "center",
+  },
+
+  deleteText: {
+    color: "#fff",
+    fontWeight: "bold",
+  },
+
   actorContainer: {
-    flexDirection: 'row',
-    marginBottom: 12,
-    paddingVertical: 8,
-    borderBottomWidth: 1,
-    borderBottomColor: '#eee',
+    flexDirection: "row",
+    marginTop: 10,
+    alignItems: "center",
   },
+
   actorImage: {
-    width: 60,
-    height: 60,
-    borderRadius: 30,
-    marginRight: 12,
+    width: 50,
+    height: 50,
+    borderRadius: 25,
+    marginRight: 10,
   },
-  actorInfo: {
-    flex: 1,
-    justifyContent: 'center',
-  },
+
   actorName: {
-    fontSize: 14,
-    fontWeight: '600',
-    color: '#333',
+    color: COLORS.text,
+    fontWeight: "bold",
   },
+
   actorRole: {
-    fontSize: 12,
-    color: '#666',
-    marginTop: 4,
+    color: COLORS.textSecondary,
   },
 });

@@ -1,1 +1,1 @@
-export const API_URL = "https://automatic-zebra-pjwvr5464rq4h9pgp-3000.app.github.dev";
+export const API_URL = "https://miniature-eureka-r469g5qx5954hx6xq-3001.app.github.dev/";

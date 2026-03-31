@@ -1,43 +1,39 @@
 import { StyleSheet } from "react-native";
+import { COLORS } from "../../../../constants/colors";
 
 export default StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#121212",
-  },
-
-  form: {
+    backgroundColor: COLORS.background,
     padding: 16,
   },
 
-  label: {
-    color: "#BBBBBB",
-    marginBottom: 6,
+  form: {
     marginTop: 10,
-    fontSize: 14,
+  },
+
+  label: {
+    color: COLORS.text,
+    marginBottom: 5,
   },
 
   input: {
-    backgroundColor: "#1E1E1E",
-    color: "#FFFFFF",
+    backgroundColor: COLORS.card,
+    color: COLORS.text,
     padding: 12,
     borderRadius: 10,
-    borderWidth: 1,
-    borderColor: "#2C2C2C",
+    marginBottom: 15,
   },
 
   textArea: {
     height: 100,
-    textAlignVertical: "top",
   },
 
   button: {
-    marginTop: 20,
-    backgroundColor: "#BB86FC",
-    padding: 16,
-    borderRadius: 12,
+    backgroundColor: COLORS.primary,
+    padding: 15,
+    borderRadius: 10,
     alignItems: "center",
-    elevation: 4,
   },
 
   buttonDisabled: {
@@ -47,6 +43,5 @@ export default StyleSheet.create({
   buttonText: {
     color: "#000",
     fontWeight: "bold",
-    fontSize: 16,
   },
 });

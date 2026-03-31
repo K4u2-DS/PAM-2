@@ -1,24 +1,29 @@
 import { useEffect, useState } from "react";
-import { getMovies } from "../services/movieService";
+import { getMovies, deleteMovie } from "../services/movieService";
 
-export const useMovies = () => {
+export function useMovies() {
   const [movies, setMovies] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
 
   const fetchMovies = async () => {
-    setLoading(true);
-    setError(null);
     try {
       const data = await getMovies();
-      console.log("Filmes recebidos:", data);
-      setMovies(Array.isArray(data) ? data : []);
+      setMovies(data || []);
     } catch (error) {
-      console.error("Erro ao buscar filmes:", error);
-      setError(error.message);
+      console.log("Erro ao buscar filmes:", error);
       setMovies([]);
     } finally {
       setLoading(false);
+    }
+  };
+
+  // 🔹 função para deletar um filme
+  const removeMovie = async (id) => {
+    try {
+      await deleteMovie(id);
+      setMovies((prev) => prev.filter((movie) => movie.id !== id));
+    } catch (error) {
+      console.log("Erro ao deletar filme:", error);
     }
   };
 
@@ -26,21 +31,5 @@ export const useMovies = () => {
     fetchMovies();
   }, []);
 
-  return {
-    movies,
-    loading,
-    error,
-    refresh: fetchMovies, 
-  };
-};
-
-/*
-O hook useMovies é responsável por gerenciar o estado dos filmes e o estado de carregamento. 
-Ele utiliza a função getMovies do serviço movieService para buscar os dados da API. 
-O hook também expõe uma função refresh para permitir que a tela MovieList possa atualizar os dados manualmente, caso necessário.
-
-Como o refresh funciona?
-R: A função refresh é simplesmente uma referência à função fetchMovies, que é responsável por buscar os filmes da API. 
-Quando a função refresh é chamada, ela executa fetchMovies, que realiza a chamada à API para obter os dados mais recentes dos filmes e atualiza o estado do hook com esses dados. 
-Isso permite que a tela MovieList possa solicitar uma atualização dos filmes a qualquer momento, garantindo que os dados exibidos estejam sempre atualizados.
-*/
+  return { movies, loading, refresh: fetchMovies, removeMovie };
+}

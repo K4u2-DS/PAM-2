@@ -1,40 +1,40 @@
 import { StyleSheet } from "react-native";
+import { COLORS } from "../../../../constants/colors";
 
 export default StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#121212",
-    padding: 16,
-  },
-
-  addButton: {
-    backgroundColor: "#BB86FC",
-    padding: 14,
-    borderRadius: 12,
-    alignItems: "center",
-    marginBottom: 16,
-    elevation: 5,
-  },
-
-  addButtonText: {
-    color: "#000",
-    fontSize: 16,
-    fontWeight: "bold",
+    backgroundColor: COLORS.background,
+    paddingTop: 10,
   },
 
   columnWrapper: {
     justifyContent: "space-between",
+    marginBottom: 10,
+  },
+
+  addButton: {
+    backgroundColor: COLORS.primary,
+    padding: 12,
+    borderRadius: 10,
+    margin: 10,
+    alignItems: "center",
+  },
+
+  addButtonText: {
+    color: "#000",
+    fontWeight: "bold",
   },
 
   loadingContainer: {
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: "#121212",
+    backgroundColor: COLORS.background,
   },
 
   loadingText: {
-    color: "#fff",
+    color: COLORS.text,
     marginTop: 10,
   },
 });
