@@ -11,10 +11,18 @@ import { useMovies } from "../../hooks/useMovies";
 import MovieCard from "../../components/MovieCard";
 import { ROUTES } from "../../../../constants/routes";
 import styles from "./styles";
+import { useFocusEffect } from '@react-navigation/native';
+import { useCallback } from 'react';
 
 export default function MovieList() {
-  const { movies, loading } = useMovies();
+  const { movies, loading, refresh } = useMovies();
   const navigation = useNavigation();
+ 
+useFocusEffect(
+    useCallback(() => {
+      refresh();
+    }, [refresh])
+  ); 
 
   if (loading) {
     return (
@@ -24,6 +32,8 @@ export default function MovieList() {
       </View>
     );
   }
+
+  
 
   return (
     <View style={styles.container}>

@@ -1,1 +1,1 @@
-export const API_URL = "https://miniature-eureka-r469g5qx5954hx6xq-3001.app.github.dev/";
+export const API_URL = "https://reimagined-space-capybara-pjwvr5464jgw36qjj-3001.app.github.dev/";

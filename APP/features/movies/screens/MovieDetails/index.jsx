@@ -17,22 +17,15 @@ export default function MovieDetails() {
   const navigation = useNavigation();
   const { movie } = route.params;
 
-  const handleDelete = () => {
-    Alert.alert("Excluir", "Deseja deletar este filme?", [
-      { text: "Cancelar" },
-      {
-        text: "Excluir",
-        style: "destructive",
-        onPress: async () => {
-          try {
-            await deleteMovie(movie.id);
-            navigation.goBack();
-          } catch (error) {
-            Alert.alert("Erro", "Falha ao deletar");
-          }
-        },
-      },
-    ]);
+ const handleDelete = async () => {
+    try {
+
+      await deleteMovie(movie.id);
+      navigation.goBack(); 
+    } catch (error) {
+      console.error("Erro ao deletar:", error);
+    
+    }
   };
 
   return (

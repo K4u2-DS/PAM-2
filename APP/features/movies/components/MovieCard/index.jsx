@@ -27,22 +27,7 @@ export default function MovieCard({ movie, onPress, onDelete }) {
         resizeMode="cover"
       />
 
-      {/* 🔹 Botão de deletar */}
-      <TouchableOpacity
-        onPress={() => onDelete(movie.id)}
-        style={{
-          position: "absolute",
-          top: 8,
-          right: 8,
-          backgroundColor: "rgba(255,0,0,0.7)",
-          padding: 6,
-          borderRadius: 20,
-          zIndex: 10,
-        }}
-      >
-        <Text style={{ color: "#fff", fontWeight: "bold" }}>🗑️</Text>
-      </TouchableOpacity>
-
+    
       <View
         style={{
           position: "absolute",
