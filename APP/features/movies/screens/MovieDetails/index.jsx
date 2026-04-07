@@ -5,11 +5,11 @@ import {
   ScrollView,
   Image,
   FlatList,
-  TouchableOpacity,
   Alert,
 } from "react-native";
 import { useRoute, useNavigation } from "@react-navigation/native";
 import { deleteMovie } from "../../services/movieService";
+import { Button } from "../../../../components";
 import styles from "./styles";
 
 export default function MovieDetails() {
@@ -43,9 +43,13 @@ export default function MovieDetails() {
         <Text style={styles.sectionTitle}>Sinopse</Text>
         <Text style={styles.synopsis}>{movie.sinopse}</Text>
 
-        <TouchableOpacity style={styles.deleteButton} onPress={handleDelete}>
-          <Text style={styles.deleteText}>🗑️ Deletar Filme</Text>
-        </TouchableOpacity>
+        <Button
+          title="🗑️ Deletar Filme"
+          onPress={handleDelete}
+          variant="danger"
+          style={styles.deleteButton}
+          textStyle={styles.deleteText}
+        />
 
         {movie.elenco?.length > 0 && (
           <>

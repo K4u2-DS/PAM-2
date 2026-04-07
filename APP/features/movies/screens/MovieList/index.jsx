@@ -3,8 +3,6 @@ import {
   View,
   FlatList,
   Text,
-  TouchableOpacity,
-  ActivityIndicator,
 } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import { useMovies } from "../../hooks/useMovies";
@@ -13,6 +11,7 @@ import { ROUTES } from "../../../../constants/routes";
 import styles from "./styles";
 import { useFocusEffect } from '@react-navigation/native';
 import { useCallback } from 'react';
+import { Button, Loading } from "../../../../components";
 
 export default function MovieList() {
   const { movies, loading, refresh } = useMovies();
@@ -25,25 +24,18 @@ useFocusEffect(
   ); 
 
   if (loading) {
-    return (
-      <View style={styles.loadingContainer}>
-        <ActivityIndicator size="large" color="#BB86FC" />
-        <Text style={styles.loadingText}>Carregando filmes...</Text>
-      </View>
-    );
+    return <Loading text="Carregando filmes..." />;
   }
-
-  
 
   return (
     <View style={styles.container}>
       
-      <TouchableOpacity
-        style={styles.addButton}
+      <Button
+        title="+ Adicionar Filme"
         onPress={() => navigation.navigate(ROUTES.CREATE_MOVIE)}
-      >
-        <Text style={styles.addButtonText}>+ Adicionar Filme</Text>
-      </TouchableOpacity>
+        style={styles.addButton}
+        textStyle={styles.addButtonText}
+      />
 
       <FlatList
         data={movies}

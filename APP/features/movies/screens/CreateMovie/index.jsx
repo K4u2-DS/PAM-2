@@ -2,14 +2,13 @@ import React, { useState } from "react";
 import { 
   View, 
   Text, 
-  TextInput, 
-  TouchableOpacity, 
   ScrollView, 
   Alert,
   KeyboardAvoidingView,
   Platform
 } from "react-native";
 import { createMovie } from "../../services/movieService";
+import { Button, Input } from "../../../../components";
 import styles from "./styles";
 
 export default function CreateMovie({ navigation }) {
@@ -21,9 +20,12 @@ export default function CreateMovie({ navigation }) {
   const [actorName, setActorName] = useState("");
   const [actorRole, setActorRole] = useState("");
   const [actorImage, setActorImage] = useState("");
+  const [actorName2, setActorName2] = useState("");
+  const [actorRole2, setActorRole2] = useState("");
+  const [actorImage2, setActorImage2] = useState("");
 
   const handleCreateMovie = async () => {
-    if (!nome || !ano || !img_capa || !sinopse || !actorName || !actorRole || !actorImage) {
+    if (!nome || !ano || !img_capa || !sinopse || !actorName || !actorRole || !actorImage || !actorName2 || !actorRole2 || !actorImage2) {
       Alert.alert("Erro", "Preencha todos os campos do filme e do elenco!");
       return;
     }
@@ -42,6 +44,12 @@ export default function CreateMovie({ navigation }) {
             personagem: actorRole,
             imagem: actorImage,
           },
+          {
+            id: Math.random().toString(36).substring(2, 8),
+            nome: actorName2,
+            personagem: actorRole2,
+            imagem: actorImage2,
+          }
         ],
       };
 
@@ -64,81 +72,86 @@ export default function CreateMovie({ navigation }) {
       <ScrollView style={styles.container} showsVerticalScrollIndicator={false}>
         <View style={styles.form}>
           <Text style={styles.label}>Nome do Filme</Text>
-          <TextInput
-            style={styles.input}
-            placeholder="Digite o nome"
-            placeholderTextColor="#888"
+          <Input
             value={nome}
             onChangeText={setNome}
+            placeholder="Digite o nome"
           />
 
           <Text style={styles.label}>Ano</Text>
-          <TextInput
-            style={styles.input}
-            placeholder="Ex: 2024"
-            placeholderTextColor="#888"
+          <Input
             value={ano}
             onChangeText={setAno}
+            placeholder="Ex: 2024"
             keyboardType="numeric"
           />
 
           <Text style={styles.label}>URL da Capa</Text>
-          <TextInput
-            style={styles.input}
-            placeholder="https://..."
-            placeholderTextColor="#888"
+          <Input
             value={img_capa}
             onChangeText={setImgCapa}
+            placeholder="https://..."
           />
 
           <Text style={styles.label}>Sinopse</Text>
-          <TextInput
-            style={[styles.input, styles.textArea]}
-            placeholder="Digite a sinopse..."
-            placeholderTextColor="#888"
+          <Input
             value={sinopse}
             onChangeText={setSinopse}
+            placeholder="Digite a sinopse..."
             multiline
+            style={styles.textArea}
           />
 
-          <Text style={styles.sectionTitle}>Elenco (obrigatório)</Text>
+          <Text style={styles.sectionTitle}>Principal</Text>
           <Text style={styles.label}>Nome do Ator/Atriz</Text>
-          <TextInput
-            style={styles.input}
-            placeholder="Digite o nome do ator"
-            placeholderTextColor="#888"
+          <Input
             value={actorName}
             onChangeText={setActorName}
+            placeholder="Digite o nome do ator"
           />
 
           <Text style={styles.label}>Personagem</Text>
-          <TextInput
-            style={styles.input}
-            placeholder="Digite a personagem"
-            placeholderTextColor="#888"
+          <Input
             value={actorRole}
             onChangeText={setActorRole}
+            placeholder="Digite a personagem"
           />
 
           <Text style={styles.label}>Foto do Ator/Atriz</Text>
-          <TextInput
-            style={styles.input}
-            placeholder="https://..."
-            placeholderTextColor="#888"
+          <Input
             value={actorImage}
             onChangeText={setActorImage}
+            placeholder="https://..."
           />
 
+          <Text style={styles.sectionTitle}>Secundario</Text>
+          <Text style={styles.label}>Nome do Ator/Atriz</Text>
+          <Input
+            value={actorName2}
+            onChangeText={setActorName2}
+            placeholder="Digite o nome do ator"
+          />
 
-          <TouchableOpacity 
-            style={[styles.button, loading && styles.buttonDisabled]}
+          <Text style={styles.label}>Personagem</Text>
+          <Input
+            value={actorRole2}
+            onChangeText={setActorRole2}
+            placeholder="Digite a personagem"
+          />
+
+          <Text style={styles.label}>Foto do Ator/Atriz</Text>
+          <Input
+            value={actorImage2}
+            onChangeText={setActorImage2}
+            placeholder="https://..."
+          />
+
+          <Button
+            title={loading ? "Cadastrando..." : "Cadastrar Filme"}
             onPress={handleCreateMovie}
             disabled={loading}
-          >
-            <Text style={styles.buttonText}>
-              {loading ? "Cadastrando..." : "Cadastrar Filme"}
-            </Text>
-          </TouchableOpacity>
+            style={loading ? styles.buttonDisabled : null}
+          />
         </View>
       </ScrollView>
     </KeyboardAvoidingView>

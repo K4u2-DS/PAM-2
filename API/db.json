@@ -11,13 +11,13 @@
           "id": 1,
           "nome": "Leonardo DiCaprio",
           "personagem": "Jack Dawson",
-          "imagem": "https://upload.wikimedia.org/wikipedia/commons/4/46/Leonardo_DiCaprio_2014.jpg"
+          "imagem": "https://m.media-amazon.com/images/M/MV5BMjI0MTg3MzI0M15BMl5BanBnXkFtZTcwMzQyODU2Mw@@._V1_FMjpg_UX1000_.jpg"
         },
         {
           "id": 2,
           "nome": "Kate Winslet",
           "personagem": "Rose DeWitt Bukater",
-          "imagem": "https://upload.wikimedia.org/wikipedia/commons/1/1c/Kate_Winslet_2018.jpg"
+          "imagem": "https://hips.hearstapps.com/hmg-prod/images/kate-winslet-attends-the-uk-premiere-of-lee-at-the-odeon-news-photo-1735923008.pjpeg?crop=0.651xw:0.958xh;0.170xw,0.0425xh&resize=640:*"
         }
       ]
     },
@@ -32,13 +32,13 @@
           "id": 1,
           "nome": "Robert Downey Jr.",
           "personagem": "Tony Stark / Homem de Ferro",
-          "imagem": "https://upload.wikimedia.org/wikipedia/commons/5/5f/Robert_Downey_Jr_2014_Comic_Con.jpg"
+          "imagem": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1tpsg6gA6U5Ko4Y-l5c6CM2f3jlWdvnZc_w&s"
         },
         {
           "id": 2,
           "nome": "Chris Evans",
           "personagem": "Steve Rogers / Capitão América",
-          "imagem": "https://upload.wikimedia.org/wikipedia/commons/8/8d/Chris_Evans_SDCC_2014.jpg"
+          "imagem": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Chris_Evans_at_the_2025_Toronto_International_Film_Festival_%28cropped%29.jpg/960px-Chris_Evans_at_the_2025_Toronto_International_Film_Festival_%28cropped%29.jpg"
         }
       ]
     },
@@ -54,6 +54,27 @@
           "nome": "Tom Holland",
           "personagem": "Peter Parker",
           "imagem": "https://m.media-amazon.com/images/M/MV5BODBjZDlhNDctN2MyNC00ZmIyLWFhYWQtMDM1MTAyZWFlZDQ2XkEyXkFqcGdeQWFybm8@._V1_QL75_UX500_CR0,0,500,281_.jpg"
+        }
+      ]
+    },
+    {
+      "id": "c80c",
+      "nome": "O Maskara",
+      "ano": "1994",
+      "img_capa": "https://ingresso-a.akamaihd.net/prd/img/movie/o-maskara/756a22c6-fd8a-4e3a-8fdc-7c74f8970407.webp",
+      "sinopse": "Stanley, a meek bank employee, turns into an eccentric and maniacal green-skinned superhero who can bend reality, after wearing a wooden mask that was created by Loki, the Norse god of mischief.",
+      "elenco": [
+        {
+          "id": "wek65f",
+          "nome": "Jim Carrey",
+          "personagem": "O Maskara",
+          "imagem": "https://m.media-amazon.com/images/M/MV5BMTQwMjAwNzI0M15BMl5BanBnXkFtZTcwOTY1MTMyOQ@@._V1_.jpg"
+        },
+        {
+          "id": "ukks4o",
+          "nome": "Cameron Diaz",
+          "personagem": "Tina Carley",
+          "imagem": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Cameron_Diaz_at_WWD_Style_Awards_2026-1998.jpg/250px-Cameron_Diaz_at_WWD_Style_Awards_2026-1998.jpg"
         }
       ]
     }
