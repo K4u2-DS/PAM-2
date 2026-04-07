@@ -43,15 +43,7 @@
       ]
     },
     {
-      "id": 17,
-      "nome": "dsasadasd",
-      "ano": "2021",
-      "img_capa": "https://upload.wikimedia.org/wikipedia/commons/8/8d/Chris_Evans_SDCC_2014.jpg",
-      "sinopse": "pokfbdoijnfdh",
-      "elenco": []
-    },
-    {
-      "id": 12,
+      "id": "12",
       "nome": "Spider-Man: Brand New Day ",
       "ano": "2026",
       "img_capa": "https://upload.wikimedia.org/wikipedia/en/thumb/9/9a/Spider-Man_Brand_New_Day_poster.jpg/250px-Spider-Man_Brand_New_Day_poster.jpg",
@@ -62,29 +54,6 @@
           "nome": "Tom Holland",
           "personagem": "Peter Parker",
           "imagem": "https://m.media-amazon.com/images/M/MV5BODBjZDlhNDctN2MyNC00ZmIyLWFhYWQtMDM1MTAyZWFlZDQ2XkEyXkFqcGdeQWFybm8@._V1_QL75_UX500_CR0,0,500,281_.jpg"
-        }
-      ]
-    },
-    {
-      "id": 1774968511305,
-      "nome": "Arthur-Paias",
-      "ano": "2009",
-      "img_capa": "https://i.redd.it/qsc70plu90oa1.jpg",
-      "sinopse": "Paiamen",
-      "elenco": []
-    },
-    {
-      "id": "64b9",
-      "nome": "TesteAPI",
-      "ano": "2026",
-      "img_capa": "https://test.img",
-      "sinopse": "Teste",
-      "elenco": [
-        {
-          "id": 1,
-          "nome": "Ator",
-          "personagem": "Papel",
-          "imagem": "https://img"
         }
       ]
     }
