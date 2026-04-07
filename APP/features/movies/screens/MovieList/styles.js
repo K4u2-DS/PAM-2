@@ -22,7 +22,7 @@ export default StyleSheet.create({
   },
 
   addButtonText: {
-    color: "#000",
+    color: COLORS.text,
     fontWeight: "bold",
   },
 

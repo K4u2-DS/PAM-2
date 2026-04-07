@@ -10,6 +10,7 @@ import {
 import { useRoute, useNavigation } from "@react-navigation/native";
 import { deleteMovie } from "../../services/movieService";
 import { Button } from "../../../../components";
+import ActorCard from "../../components/ActorCard";
 import styles from "./styles";
 
 export default function MovieDetails() {
@@ -59,15 +60,7 @@ export default function MovieDetails() {
               scrollEnabled={false}
               data={movie.elenco}
               keyExtractor={(item) => item.id.toString()}
-              renderItem={({ item }) => (
-                <View style={styles.actorContainer}>
-                  <Image source={{ uri: item.imagem }} style={styles.actorImage} />
-                  <View>
-                    <Text style={styles.actorName}>{item.nome}</Text>
-                    <Text style={styles.actorRole}>{item.personagem}</Text>
-                  </View>
-                </View>
-              )}
+              renderItem={({ item }) => <ActorCard actor={item} />}
             />
           </>
         )}

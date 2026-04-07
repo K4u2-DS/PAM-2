@@ -52,26 +52,4 @@ export default StyleSheet.create({
     color: "#fff",
     fontWeight: "bold",
   },
-
-  actorContainer: {
-    flexDirection: "row",
-    marginTop: 10,
-    alignItems: "center",
-  },
-
-  actorImage: {
-    width: 50,
-    height: 50,
-    borderRadius: 25,
-    marginRight: 10,
-  },
-
-  actorName: {
-    color: COLORS.text,
-    fontWeight: "bold",
-  },
-
-  actorRole: {
-    color: COLORS.textSecondary,
-  },
 });

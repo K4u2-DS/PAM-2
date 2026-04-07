@@ -21,7 +21,7 @@ export default StyleSheet.create({
     opacity: 0.7,
   },
   text: {
-    color: "#000",
+    color: COLORS.text,
     fontWeight: "bold",
     fontSize: 16,
   },

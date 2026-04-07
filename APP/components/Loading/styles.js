@@ -7,6 +7,7 @@ export default StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     padding: 16,
+    backgroundColor: COLORS.background,
   },
   text: {
     marginTop: 12,
