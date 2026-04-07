@@ -1,27 +1,30 @@
 import { StyleSheet } from "react-native";
+import { COLORS } from "../../../../constants/colors";
 
 export default StyleSheet.create({
-  container: {
+  card: {
     marginBottom: 16,
-    backgroundColor: "#fff",
-    borderRadius: 8,
-    padding: 8
+    borderRadius: 14,
+    overflow: "hidden",
+    backgroundColor: COLORS.card,
   },
   image: {
     width: "100%",
-    height: 300,
-    borderRadius: 8
+  },
+  cardFooter: {
+    position: "absolute",
+    bottom: 0,
+    width: "100%",
+    padding: 10,
+    backgroundColor: "rgba(0,0,0,0.7)",
   },
   title: {
-    fontSize: 18,
+    color: COLORS.text,
     fontWeight: "bold",
-    paddingBlock: 8
+    fontSize: 14,
   },
   year: {
-    fontSize: 16
-  }
+    color: COLORS.textSecondary,
+    fontSize: 12,
+  },
 });
-
-
-
-// { marginBottom: 16, width: width || 170, backgroundColor: "#fff", borderRadius: 8, padding: 8 }
