@@ -1,28 +1,21 @@
-import { View, Text, Image, TouchableOpacity, Dimensions } from "react-native";
+import React from "react";
+import { View, Text, Image, TouchableOpacity } from "react-native";
 import styles from "./styles";
 
-const { width } = Dimensions.get("window");
-const CARD_WIDTH = (width - 30) / 2;
-
-export default function MovieCard({ movie, onPress }) {
+export default function MovieCard({ movie, onPress, width }) {
   return (
-    <TouchableOpacity
-      onPress={onPress}
-      activeOpacity={0.8}
-      style={[styles.card, { width: CARD_WIDTH }]}
-    >
-      <Image
-        source={{ uri: movie.img_capa }}
-        style={[styles.image, { height: CARD_WIDTH * 1.5 }]}
-        resizeMode="cover"
-      />
-
-      <View style={styles.cardFooter}>
-        <Text style={styles.title} numberOfLines={1}>
-          {movie.nome}
+    <TouchableOpacity onPress={onPress}>
+      <View style={[styles.container, { width: width }]}>
+        <Image
+          source={{ uri: `https://image.tmdb.org/t/p/w500${movie.poster_path}` }}
+          style={styles.image}
+        />
+        <Text style={styles.title}>
+          {movie.title}
         </Text>
-
-        <Text style={styles.year}>{movie.ano}</Text>
+        <Text style={styles.year}>
+          {movie.release_date}
+        </Text>
       </View>
     </TouchableOpacity>
   );
