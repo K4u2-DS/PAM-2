@@ -1,55 +1,21 @@
 import { StyleSheet } from "react-native";
-import { COLORS } from "../../../../constants/colors";
 
 export default StyleSheet.create({
   container: {
-    flex: 1,
-    backgroundColor: COLORS.background,
+    padding: 16
   },
-
-  poster: {
+  image: {
     width: "100%",
     height: 300,
+    borderRadius: 8
   },
-
-  content: {
-    padding: 16,
-  },
-
   title: {
-    color: COLORS.text,
-    fontSize: 24,
+    fontSize: 22,
     fontWeight: "bold",
+    marginTop: 12
   },
-
   year: {
-    color: COLORS.textSecondary,
-    marginBottom: 10,
-  },
-
-  sectionTitle: {
-    color: COLORS.primary,
-    marginTop: 15,
     fontSize: 16,
-    fontWeight: "bold",
-  },
-
-  synopsis: {
-    color: COLORS.textSecondary,
-    marginTop: 5,
-    lineHeight: 20,
-  },
-
-  deleteButton: {
-    marginTop: 20,
-    backgroundColor: COLORS.danger,
-    padding: 12,
-    borderRadius: 10,
-    alignItems: "center",
-  },
-
-  deleteText: {
-    color: "#fff",
-    fontWeight: "bold",
-  },
+    marginBottom: 12
+  }
 });

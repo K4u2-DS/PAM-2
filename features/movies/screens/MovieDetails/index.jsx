@@ -1,70 +1,29 @@
 import React from "react";
-import {
-  View,
-  Text,
-  ScrollView,
-  Image,
-  FlatList,
-  Alert,
-} from "react-native";
-import { useRoute, useNavigation } from "@react-navigation/native";
-import { deleteMovie } from "../../services/movieService";
-import { Button } from "../../../../components";
+import { useRoute } from "@react-navigation/native";
+import { useElencoMovie } from "../../hooks/useElencoMovies";
 import ActorCard from "../../components/ActorCard";
+import { View, Text, Image, ScrollView, FlatList } from "react-native";
 import styles from "./styles";
 
 export default function MovieDetails() {
   const route = useRoute();
-  const navigation = useNavigation();
   const { movie } = route.params;
-
- const handleDelete = async () => {
-    if (!movie?.id) {
-      Alert.alert("Erro", "Não foi possível identificar o filme para deletar.");
-      return;
-    }
-
-    try {
-      await deleteMovie(movie.id);
-      navigation.goBack(); 
-    } catch (error) {
-      console.error("Erro ao deletar:", error);
-      Alert.alert("Erro", "Falha ao deletar filme.");
-    }
-  };
+  const { elenco } = useElencoMovie(movie.id);
 
   return (
     <ScrollView style={styles.container}>
-      <Image source={{ uri: movie.img_capa }} style={styles.poster} />
+      <Image source={{ uri: movie.img_capa }} style={styles.image} />
+      <Text style={styles.title}>{movie.nome}</Text>
+      <Text style={styles.year}>{movie.ano}</Text>
+      <Text style={styles.description}>{movie.sinopse}</Text>
+      <Text style={styles.titleElenco}>Elenco</Text>
 
-      <View style={styles.content}>
-        <Text style={styles.title}>{movie.nome}</Text>
-        <Text style={styles.year}>{movie.ano}</Text>
-
-        <Text style={styles.sectionTitle}>Sinopse</Text>
-        <Text style={styles.synopsis}>{movie.sinopse}</Text>
-
-        <Button
-          title="🗑️ Deletar Filme"
-          onPress={handleDelete}
-          variant="danger"
-          style={styles.deleteButton}
-          textStyle={styles.deleteText}
-        />
-
-        {movie.elenco?.length > 0 && (
-          <>
-            <Text style={styles.sectionTitle}>Elenco</Text>
-
-            <FlatList
-              scrollEnabled={false}
-              data={movie.elenco}
-              keyExtractor={(item) => item.id.toString()}
-              renderItem={({ item }) => <ActorCard actor={item} />}
-            />
-          </>
-        )}
-      </View>
+      <FlatList
+        data={elenco}
+        horizontal
+        keyExtractor={(item) => item.id.toString()}
+        renderItem={({ item }) => <ActorCard actor={item} />}
+      />
     </ScrollView>
   );
 }

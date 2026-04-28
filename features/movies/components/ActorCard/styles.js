@@ -1,26 +1,16 @@
 import { StyleSheet } from "react-native";
-import { COLORS } from "../../../../constants/colors";
 
 export default StyleSheet.create({
-  container: {
-    flexDirection: "row",
-    marginTop: 10,
-    alignItems: "center",
+  cardBody: {
+    marginRight: 12,
+    width: 100
   },
-
   image: {
-    width: 50,
-    height: 50,
-    borderRadius: 25,
-    marginRight: 10,
+    width: 100,
+    height: 140,
+    borderRadius: 8
   },
-
-  name: {
-    color: COLORS.text,
-    fontWeight: "bold",
-  },
-
-  role: {
-    color: COLORS.textSecondary,
-  },
+  personagem: {
+    fontSize: 12
+  }
 });
