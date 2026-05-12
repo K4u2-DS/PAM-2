@@ -10,7 +10,7 @@
  * - `loading`: indica se a busca inicial ainda está em andamento;
  * - `refresh`: função assíncrona para atualizar manualmente a lista de filmes.
  */
- 
+
 
 import { useEffect, useState } from "react";
 import { getPopularMovies, getElencoMovie, getMovieDetails } from "../services/movieService";
@@ -71,7 +71,7 @@ export const useElencoMovie = (movieId) => {
       }
     })();
   }, [movieId]);
-  
+
   return { elenco, loading };
 };
 
